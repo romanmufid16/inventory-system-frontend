@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 
-const LoginPage = () => {
+const RegisterPage = () => {
   return (
-    <div className="h-screen font-sans bg-gray-100 p-4 relative">
+    <div className="min-h-screen font-sans bg-gray-100 p-4 relative">
       <div className="w-full h-1/3 absolute left-1/2 transform -translate-x-1/2 rounded-md overflow-hidden z-10 px-4">
         <div className="w-full h-full relative">
           <img
@@ -18,9 +18,16 @@ const LoginPage = () => {
           <h1 className="text-3xl font-bold">Welcome Back !!</h1>
           <p className="text-center max-w-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ratione, laborum deleniti repellat ducimus quam!?</p>
           <div className="w-full max-w-sm bg-white text-default flex flex-col mt-8 rounded-lg p-12 shadow-md">
-            <span className="block text-3xl font-bold mb-3">Login Page</span>
-            <span className="block text-sm text-secondary mb-5">Enter your email and password to sign in</span>
+            <span className="block text-3xl font-bold mb-3">Register Page</span>
+            <span className="block text-sm text-secondary mb-5">Enter your information to sign up</span>
             <form action="" className="w-full">
+              <div className="mb-3">
+                <label htmlFor="name" className="block mb-2">Name</label>
+                <input type="text" name="name"
+                  className="border border-gray-200 w-full p-3 focus:outline-none rounded-md"
+                  placeholder="Name"
+                />
+              </div>
               <div className="mb-3">
                 <label htmlFor="email" className="block mb-2">Email</label>
                 <input type="email" name="email"
@@ -37,8 +44,8 @@ const LoginPage = () => {
               </div>
               <button type="submit" className="w-full bg-primary p-2 text-white rounded-md shadow-md text-shadow-lg mb-5">Submit</button>
               <span className="text-center block text-secondary">
-                Don&apos;t have an account?
-                <Link to="/register" className="text-primary font-semibold hover:underline"> Sign Up</Link>
+                Already have an account?
+                <Link to="/login" className="text-primary font-semibold hover:underline"> Sign In</Link>
               </span>
             </form>
           </div>
@@ -48,4 +55,4 @@ const LoginPage = () => {
   )
 }
 
-export default LoginPage
+export default RegisterPage
